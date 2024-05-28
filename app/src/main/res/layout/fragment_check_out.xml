@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CheckOutFragment"
+    android:orientation="vertical"
+    android:weightSum="2"
+    android:background="@color/light_coral_pink"
+    >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:layout_marginBottom="20dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <TextView
+                android:id="@+id/checkOutTitle"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:padding="30dp"
+                android:textColor="@color/black"
+                android:background="@color/coral"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:text="Checkout"
+                />
+            <View
+                android:id="@+id/line1"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                app:layout_constraintTop_toBottomOf="@id/checkOutTitle"
+                android:background="@color/dark_grey">
+
+            </View>
+
+            <TextView
+                android:id="@+id/orderTotalText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginLeft="30dp"
+                app:layout_constraintTop_toBottomOf="@id/line1"
+                app:layout_constraintBottom_toTopOf="@id/line2"
+                android:layout_marginTop="30dp"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:text="Order Total"
+                />
+            <TextView
+                android:id="@+id/orderTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/orderTotalText"
+                app:layout_constraintTop_toTopOf="@id/orderTotalText"
+                app:layout_constraintBottom_toBottomOf="@id/orderTotalText"
+                android:layout_marginLeft="50dp"
+                android:textColor="@color/black"
+                android:textSize="35sp"
+                android:textStyle="bold"
+                android:hint="£100"
+                />
+
+            <View
+                android:id="@+id/line2"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintTop_toBottomOf="@id/orderTotalText"
+                android:background="@color/dark_grey">
+
+            </View>
+            <TextView
+                android:id="@+id/paymentTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginLeft="30dp"
+                app:layout_constraintTop_toBottomOf="@id/line2"
+                android:layout_marginTop="30dp"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:text="Payment Method"
+                />
+            <RadioGroup
+                android:id="@+id/paymentRadioGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="@id/paymentTitle"
+                app:layout_constraintTop_toBottomOf="@id/paymentTitle">
+
+                <RadioButton
+                    android:id="@+id/registeredMethod"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+
+
+                <RadioButton
+                    android:id="@+id/otherPayment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:text="Other:" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/paymentMethod"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/paymentRadioGroup"
+                app:layout_constraintTop_toBottomOf="@id/paymentTitle"
+                android:layout_marginTop="20dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:hint="Card end, expirydate"
+                android:textSize="20sp"/>
+
+
+
+            <EditText
+                android:id="@+id/nameCardField"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Eg. Angela Pellillo"
+                android:inputType="text"
+                android:minHeight="48dp"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@id/paymentRadioGroup"
+                app:layout_constraintTop_toBottomOf="@id/paymentRadioGroup" />
+
+            <EditText
+                android:id="@+id/cardNoField"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:ems="10"
+                android:hint="Eg. 1234 5678 9012 3456"
+                android:inputType="number"
+                android:minHeight="48dp"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@id/nameCardField"
+                app:layout_constraintTop_toBottomOf="@id/nameCardField" />
+
+
+            <EditText
+                android:id="@+id/expiryDateField"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:ems="5"
+                android:gravity="center"
+                android:hint="MM/YY"
+                android:textColor="@color/black"
+                android:minHeight="48dp"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/cardNoField"
+                app:layout_constraintTop_toBottomOf="@+id/cardNoField" />
+
+
+
+            <EditText
+                android:id="@+id/cvvField"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:ems="4"
+                android:hint="123"
+                android:inputType="number"
+                android:minHeight="48dp"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/expiryDateField"
+                app:layout_constraintTop_toBottomOf="@id/expiryDateField" />
+
+            <ImageButton
+                android:id="@+id/cvvInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@id/cvvField"
+                app:layout_constraintTop_toTopOf="@id/cvvField"
+                app:layout_constraintBottom_toBottomOf="@id/cvvField"
+                android:layout_marginTop="10dp"
+                app:srcCompat="@drawable/icon_question_mark_line"
+                android:background="@null"
+                android:onClick="cvvInfo"/>
+
+
+            <ImageButton
+                android:id="@+id/pcInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/postCodeField"
+                app:layout_constraintBottom_toBottomOf="@id/postCodeField"
+                app:layout_constraintTop_toTopOf="@id/postCodeField"
+                android:layout_marginTop="10dp"
+                app:srcCompat="@drawable/icon_question_mark_line"
+                android:background="@null"
+                android:onClick="pcInfo"/>
+
+            <View
+                android:id="@+id/line3"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintTop_toBottomOf="@id/cvvInfo"
+                android:background="@color/dark_grey">
+
+            </View>
+
+            <TextView
+                android:id="@+id/deliverTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginLeft="30dp"
+                app:layout_constraintTop_toBottomOf="@id/line3"
+                android:layout_marginTop="30dp"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:text="Delivery Address"
+                />
+            <RadioGroup
+                android:id="@+id/addressRadioGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="@id/deliverTitle"
+                app:layout_constraintTop_toBottomOf="@id/deliverTitle">
+
+                <RadioButton
+                    android:id="@+id/registeredAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/black"
+                    />
+
+
+                <RadioButton
+                    android:id="@+id/otherAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="80dp"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:text="Other:" />
+            </RadioGroup>
+            <TextView
+                android:id="@+id/address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/addressRadioGroup"
+                app:layout_constraintTop_toBottomOf="@id/deliverTitle"
+                android:layout_marginTop="20dp"
+                android:inputType="textMultiLine"
+                android:maxLines="6"
+                android:hint="Flat 1fdfsdfffs"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/addressField"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/addressRadioGroup"
+                app:layout_constraintTop_toBottomOf="@id/addressRadioGroup"
+                android:ems="10"
+                android:inputType="text"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:hint="Eg. Flat 1 Smiths Road"
+                />
+
+
+            <EditText
+                android:id="@+id/cityField"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/addressRadioGroup"
+                app:layout_constraintTop_toBottomOf="@id/postCodeField"
+                android:layout_marginTop="8dp"
+                android:ems="10"
+                android:inputType="text"
+                android:hint="Eg. London"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                />
+
+            <EditText
+                android:id="@+id/postCodeField"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/cityField"
+                app:layout_constraintTop_toBottomOf="@id/addressField"
+                android:layout_marginTop="8dp"
+                android:ems="10"
+                android:inputType="text"
+                android:hint="Eg. A12 3BC"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                />
+
+
+            <EditText
+                android:id="@+id/countryField"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/postCodeField"
+                app:layout_constraintTop_toBottomOf="@id/cityField"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="20dp"
+                android:ems="10"
+                android:inputType="text"
+                android:textColor="@color/black"
+                android:hint="Eg. United Kingdom"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                />
+
+            <View
+                android:id="@+id/line4"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintTop_toBottomOf="@id/countryField"
+                android:background="@color/dark_grey">
+
+            </View>
+
+            <TextView
+                android:id="@+id/deliverMethod"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginLeft="30dp"
+                app:layout_constraintTop_toBottomOf="@id/line4"
+                android:layout_marginTop="30dp"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:text="Delivery Method"
+                />
+
+            <RadioGroup
+                android:id="@+id/deliveryRadioGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="@id/deliverMethod"
+                app:layout_constraintTop_toBottomOf="@id/deliverMethod">
+
+                <RadioButton
+                    android:id="@+id/freeDelivery"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/black"
+                    android:text="Free Delivery: 5 Working Days"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    />
+
+
+                <RadioButton
+                    android:id="@+id/expressDelivery"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:text="2-Day Delivery: £5.00"
+                    />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/orderTotalText2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/deliveryRadioGroup"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/deliveryRadioGroup"
+                android:layout_marginTop="30dp"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:text="Order Total"
+                />
+
+
+                <Button
+                    android:id="@+id/placeOrder"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/orderTotalText2"
+                    app:layout_constraintStart_toStartOf="@id/cancelBtn"
+                    app:layout_constraintEnd_toEndOf="@id/cancelBtn"
+                    android:text="Order"
+                    android:onClick="placeOrder"
+                    android:layout_marginTop="40dp"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:backgroundTint="@null"
+                    android:background="@drawable/custom_btn"
+                    />
+
+                <Button
+                    android:id="@+id/cancelBtn"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/placeOrder"
+                    android:text="Cancel"
+                    android:onClick="cancel"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:background="@drawable/custom_btn"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="20dp"/>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+
+    </LinearLayout>
+
+
+

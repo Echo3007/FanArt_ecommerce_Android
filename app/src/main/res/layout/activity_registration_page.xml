@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegistrationPage">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/titleSignUp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="Register"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/fullname_textInput_Layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="30dp"
+                android:padding="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/titleSignUp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/fullname_EditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Your Full Name" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/email_textInput_Layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:padding="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fullname_textInput_Layout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/email_EditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter Your Email" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/username_textInput_Layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:padding="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/email_textInput_Layout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/username_EditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter Your Username" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/password_textInput_Layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:padding="10dp"
+                app:counterEnabled="true"
+                app:counterMaxLength="20"
+                app:errorEnabled="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/username_textInput_Layout"
+                app:passwordToggleEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/password_EditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter Your Password"
+                    android:inputType="textPassword" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/re_password_textInput_Layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:padding="10dp"
+                app:counterEnabled="true"
+                app:counterMaxLength="20"
+                app:errorEnabled="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/password_textInput_Layout"
+                app:passwordToggleEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/re_password_EditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Re-Enter Your Password"
+                    android:inputType="textPassword" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <TextView
+                android:id="@+id/gender_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Gender"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/re_password_textInput_Layout"
+                app:layout_constraintTop_toBottomOf="@id/re_password_textInput_Layout"
+
+                />
+
+            <RadioGroup
+                android:id="@+id/gender_radioGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="@id/gender_textView"
+                app:layout_constraintTop_toBottomOf="@id/gender_textView">
+
+                <RadioButton
+                    android:id="@+id/radioBtnMan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Woman" />
+
+                <RadioButton
+                    android:id="@+id/radioBtnWmn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Man" />
+
+                <RadioButton
+                    android:id="@+id/radioBtnNB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Non Binary" />
+
+                <RadioButton
+                    android:id="@+id/radioBtnOther"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/genderSpec"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:hint="Please specify"
+                app:layout_constraintBottom_toBottomOf="@id/gender_radioGroup"
+                app:layout_constraintStart_toStartOf="@id/gender_radioGroup"
+                tools:ignore="TouchTargetSizeCheck" />
+
+
+            <TextView
+                android:id="@+id/dob_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Date Of Birth"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/gender_radioGroup"
+                app:layout_constraintTop_toBottomOf="@id/gender_radioGroup" />
+
+
+
+                <EditText
+                    android:id="@+id/dobField"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    app:layout_constraintStart_toStartOf="@id/dob_textView"
+                    app:layout_constraintTop_toBottomOf="@id/dob_textView"
+                    android:layout_marginRight="10dp"
+                    android:hint="DD/MM/YYYY"></EditText>
+
+
+            <TextView
+                android:id="@+id/titleAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Address/Delivery Details"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/dobField"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="30dp"
+                android:textSize="30sp"
+                android:textStyle="bold"/>
+
+
+            <TextView
+                android:id="@+id/address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Address Line 1"
+                app:layout_constraintStart_toStartOf="@id/titleAddress"
+                app:layout_constraintTop_toBottomOf="@id/titleAddress"
+                android:layout_marginTop="30dp"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/addressField"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/address"
+                app:layout_constraintTop_toBottomOf="@id/address"
+                android:layout_marginTop="8dp"
+                android:ems="10"
+                android:inputType="text"
+                android:hint="Eg. Flat 1 Smiths Road"
+                />
+
+
+            <TextView
+                android:id="@+id/city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="City"
+                app:layout_constraintStart_toStartOf="@id/address"
+                app:layout_constraintTop_toBottomOf="@id/addressField"
+                android:layout_marginTop="20dp"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/cityField"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/city"
+                app:layout_constraintTop_toBottomOf="@id/city"
+                android:layout_marginTop="8dp"
+                android:ems="10"
+                android:inputType="text"
+                android:hint="Eg. London"
+                />
+
+            <TextView
+                android:id="@+id/postCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Post Code"
+                app:layout_constraintStart_toStartOf="@id/city"
+                app:layout_constraintTop_toBottomOf="@id/cityField"
+                android:layout_marginTop="20dp"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/postCodeField"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/postCode"
+                app:layout_constraintTop_toBottomOf="@id/postCode"
+                android:layout_marginTop="8dp"
+                android:ems="10"
+                android:inputType="text"
+                android:hint="Eg. A12 3BC"
+                />
+
+            <TextView
+                android:id="@+id/country"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Country"
+                app:layout_constraintStart_toStartOf="@id/city"
+                app:layout_constraintTop_toBottomOf="@id/postCodeField"
+                android:layout_marginTop="20dp"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/countryField"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/postCode"
+                app:layout_constraintTop_toBottomOf="@id/country"
+                android:layout_marginTop="8dp"
+                android:ems="10"
+                android:inputType="text"
+                android:hint="Eg. United Kingdom"
+                />
+
+            <TextView
+                android:id="@+id/titleRegPt2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Payment Details"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/countryField"
+                android:layout_marginTop="30dp"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                />
+
+
+            <TextView
+                android:id="@+id/nameCard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/titleRegPt2"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="30dp"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:text="Name on card"
+                />
+
+            <EditText
+                android:id="@+id/nameCardField"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:ems="10"
+                android:hint="Eg. Angela Pellillo"
+                android:inputType="text"
+                android:minHeight="48dp"
+                app:layout_constraintStart_toStartOf="@id/nameCard"
+                app:layout_constraintTop_toBottomOf="@id/nameCard" />
+
+            <TextView
+                android:id="@+id/cardNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/nameCard"
+                app:layout_constraintTop_toBottomOf="@id/nameCardField"
+                android:layout_marginTop="25dp"
+                android:text="Card Number"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                />
+
+            <EditText
+                android:id="@+id/cardNoField"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:ems="10"
+                android:hint="Eg. 1234 5678 9012 3456"
+                android:inputType="number"
+                android:minHeight="48dp"
+                app:layout_constraintStart_toStartOf="@id/cardNo"
+                app:layout_constraintTop_toBottomOf="@id/cardNo" />
+
+            <TextView
+                android:id="@+id/expiryDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/cardNoField"
+                app:layout_constraintTop_toBottomOf="@id/cardNoField"
+                android:layout_marginTop="25dp"
+                android:text="Expiry Date"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                />
+
+            <EditText
+                android:id="@+id/expiryDateField"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:ems="5"
+                android:gravity="center"
+                android:hint="MM/YY"
+                android:minHeight="48dp"
+                app:layout_constraintStart_toStartOf="@id/expiryDate"
+                app:layout_constraintTop_toBottomOf="@+id/expiryDate" />
+
+            <TextView
+                android:id="@+id/cvv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CVV"
+                app:layout_constraintStart_toEndOf="@id/cardNoField"
+                app:layout_constraintTop_toBottomOf="@id/cardNoField"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="-40dp"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+
+            <EditText
+                android:id="@+id/cvvField"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:ems="4"
+                android:hint="123"
+                android:inputType="number"
+                android:minHeight="48dp"
+                app:layout_constraintStart_toStartOf="@id/cvv"
+                app:layout_constraintTop_toBottomOf="@id/cvv" />
+
+            <ImageButton
+                android:id="@+id/cvvInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@id/cvvField"
+                app:layout_constraintTop_toBottomOf="@id/cvv"
+                app:layout_constraintBottom_toBottomOf="@id/cvvField"
+                android:layout_marginTop="10dp"
+                app:srcCompat="@drawable/icon_question_mark_line"
+                android:background="@null"
+                android:onClick="cvvInfo"/>
+
+
+
+            <ImageButton
+                android:id="@+id/pcInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/expiryDateField"
+                app:layout_constraintBottom_toBottomOf="@id/expiryDateField"
+                app:layout_constraintTop_toBottomOf="@id/expiryDate"
+                android:layout_marginTop="10dp"
+                app:srcCompat="@drawable/icon_question_mark_line"
+                android:background="@null"
+                android:onClick="pcInfo"/>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cvvField"
+                app:layout_constraintStart_toStartOf="@id/dobField"
+                android:orientation="horizontal"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:weightSum="3">
+
+                <Button
+                    android:id="@+id/cnlBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="30dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/custom_btn"
+                    android:text="Cancel"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:backgroundTint="@color/black"
+                    android:onClick="goBackLgn"
+                    />
+
+
+                <Button
+                    android:id="@+id/registerBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/custom_btn"
+                    android:text="Register"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    app:backgroundTint="@null"
+
+                    />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
+
+
+</LinearLayout>

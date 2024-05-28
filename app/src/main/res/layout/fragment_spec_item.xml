@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SpecItemFragment"
+    android:backgroundTint="@color/light_coral_pink"
+    android:background="@color/light_coral_pink">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <ImageView
+            android:id="@+id/imageSpecItem"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@color/light_teal"
+            android:layout_marginTop="30dp"
+            android:layout_width="400dp"
+            android:layout_height="400dp" />
+
+        <TextView
+            android:id="@+id/nameSpecItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imageSpecItem"
+            android:layout_marginTop="15dp"
+            android:text="CIAOOOOOOOO"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/artistName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginRight="30dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/red"
+            android:layout_marginTop="30dp"
+            app:layout_constraintTop_toBottomOf="@id/nameSpecItem"
+            android:hint="Artist: "
+            ></TextView>
+        <TextView
+            android:id="@+id/itemDescr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            app:layout_constraintTop_toBottomOf="@id/artistName"
+            app:layout_constraintStart_toStartOf="@id/imageSpecItem"
+            app:layout_constraintEnd_toEndOf="@id/imageSpecItem"
+            android:text="Loading...."
+            android:textSize="20sp"
+            android:layout_marginTop="30dp"
+            android:gravity="left"
+            ></TextView>
+
+        <TextView
+            android:id="@+id/priceText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/itemDescr"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="20dp"
+            android:text="Price"
+            android:textStyle="bold"
+            android:textSize="25sp"></TextView>
+
+        <TextView
+            android:id="@+id/stockText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/priceText"
+            app:layout_constraintTop_toBottomOf="@id/priceText"
+            android:layout_marginTop="30dp"
+            android:text="In Stock"
+            android:textColor="@color/green"
+            android:textStyle="bold"
+            android:textSize="20sp"></TextView>
+
+        <TextView
+            android:id="@+id/quantityText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quantity:"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@id/stockText"
+            app:layout_constraintTop_toBottomOf="@id/stockText"
+            android:layout_marginTop="20dp"
+            ></TextView>
+
+        <NumberPicker
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/quantityPicker"
+            app:layout_constraintStart_toEndOf="@id/quantityText"
+            app:layout_constraintTop_toTopOf="@id/quantityText"
+            app:layout_constraintBottom_toBottomOf="@id/quantityText"
+            android:layout_marginLeft="20dp"
+            android:background="@color/light_coral_pink"
+            android:backgroundTint="@color/light_coral_pink"
+            ></NumberPicker>
+
+        <Button
+            android:id="@+id/addBasketBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/quantityPicker"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            app:backgroundTint="@null"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:background="@drawable/custom_btn"
+            android:text="Add To Basket"
+             />
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</ScrollView>

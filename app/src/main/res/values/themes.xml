@@ -1,0 +1,33 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Assessment2" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/light_grey</item>
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+
+    </style>
+
+    <style name="round_pic">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">56%</item>
+    </style>
+
+    <style name="floatingMessage" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+
+    </style>
+
+    <style name="Theme.Assessment2" parent="Base.Theme.Assessment2" />
+
+
+    <style name="MyButton">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="backgroundTint">@color/light_grey</item>
+        <item name="background">@drawable/custom_btn</item>
+
+    </style>
+
+
+
+</resources>

@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/titleRegPt2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Payment Details"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="30dp"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        />
+
+
+    <TextView
+        android:id="@+id/nameCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/titleRegPt2"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="30dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:text="Name on card"
+         />
+
+    <EditText
+        android:id="@+id/nameCardField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="Eg. Angela Pellillo"
+        android:inputType="text"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="@id/nameCard"
+        app:layout_constraintTop_toBottomOf="@id/nameCard" />
+
+    <TextView
+        android:id="@+id/cardNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/nameCard"
+        app:layout_constraintTop_toBottomOf="@id/nameCardField"
+        android:layout_marginTop="25dp"
+        android:text="Card Number"
+        android:textSize="20sp"
+        android:textStyle="bold"
+         />
+
+    <EditText
+        android:id="@+id/cardNoField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="Eg. 1234 5678 9012 3456"
+        android:inputType="number"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="@id/cardNo"
+        app:layout_constraintTop_toBottomOf="@id/cardNo" />
+
+    <TextView
+        android:id="@+id/expiryDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/cardNoField"
+        app:layout_constraintTop_toBottomOf="@id/cardNoField"
+        android:layout_marginTop="25dp"
+        android:text="Expiry Date"
+        android:textSize="20sp"
+        android:textStyle="bold"
+         />
+
+    <EditText
+        android:id="@+id/expiryDateField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ems="5"
+        android:gravity="center"
+        android:hint="MM/YY"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="@id/expiryDate"
+        app:layout_constraintTop_toBottomOf="@+id/expiryDate" />
+
+    <TextView
+        android:id="@+id/cvv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CVV"
+        app:layout_constraintStart_toEndOf="@id/cardNoField"
+        app:layout_constraintTop_toBottomOf="@id/cardNoField"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="-40dp"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+
+
+    <EditText
+        android:id="@+id/cvvField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="4"
+        android:hint="123"
+        android:inputType="number"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="@id/cvv"
+        app:layout_constraintTop_toBottomOf="@id/cvv" />
+
+    <ImageButton
+        android:id="@+id/cvvInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@id/cvvField"
+        app:layout_constraintTop_toBottomOf="@id/cvv"
+        app:layout_constraintBottom_toBottomOf="@id/cvvField"
+        android:layout_marginTop="10dp"
+        app:srcCompat="@drawable/icon_question_mark_line"
+        android:background="@null"
+        android:onClick="cvvInfo"/>
+
+    <TextView
+        android:id="@+id/postCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/expiryDateField"
+        app:layout_constraintTop_toBottomOf="@id/expiryDateField"
+        android:layout_marginTop="25dp"
+        android:text="Post Code"
+        android:textSize="20sp"
+        android:textStyle="bold"
+         />
+
+    <EditText
+        android:id="@+id/postCodeField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/postCode"
+        app:layout_constraintTop_toBottomOf="@id/postCode"
+        android:layout_marginTop="10dp"
+        android:ems="6"
+        android:hint="A12 3BC"
+        android:inputType="text"
+        android:minHeight="48dp"
+         />
+
+    <ImageButton
+        android:id="@+id/pcInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/postCode"
+        app:layout_constraintBottom_toBottomOf="@id/postCodeField"
+        app:layout_constraintTop_toBottomOf="@id/postCode"
+        android:layout_marginTop="10dp"
+        app:srcCompat="@drawable/icon_question_mark_line"
+        android:background="@null"
+        android:onClick="pcInfo"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/postCodeField"
+        app:layout_constraintStart_toEndOf="@id/postCode"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:weightSum="3">
+
+        <Button
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
+            android:textSize="20sp"
+            android:layout_weight="1.5"
+            android:onClick="goPrev"
+            android:background="@drawable/custom_btn"
+            app:backgroundTint="@color/black"
+            />
+
+        <Button
+            android:id="@+id/registerBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Register"
+            android:onClick="register"
+            android:layout_marginRight="30dp"
+            android:textSize="20sp"
+            android:background="@drawable/custom_btn"
+            app:backgroundTint="@null"
+            />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

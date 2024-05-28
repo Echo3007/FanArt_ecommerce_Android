@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ResetPswPt2">
+
+    <TextView
+        android:id="@+id/resetTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="30dp"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:text="Reset Password"
+        />
+
+    <ImageView
+        android:id="@+id/resetImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/resetTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="30dp"
+        app:srcCompat="@drawable/reset_password_1"
+        />
+
+    <TextView
+        android:id="@+id/info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/resetImg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginLeft="40dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:text="Please enter the 4 digits code."
+        android:textColor="@color/dark_grey"
+        android:gravity="center"
+        />
+
+    <TextView
+        android:id="@+id/counter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/info"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginLeft="40dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:text=""
+        android:textColor="@color/dark_grey"
+        android:gravity="center"
+        />
+
+    <ImageView
+        android:id="@+id/keyImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/counter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="30dp"
+        app:srcCompat="@drawable/reset_password_7"
+         />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/codeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@id/keyImg"
+        app:layout_constraintStart_toStartOf="@id/info"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <EditText
+            android:id="@+id/num1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/keyImg"
+            android:layout_marginRight="20dp"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/info"
+            android:ems="1"
+            android:inputType="number"
+            />
+
+        <EditText
+            android:id="@+id/num2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            app:layout_constraintTop_toBottomOf="@id/keyImg"
+            app:layout_constraintStart_toEndOf="@id/num1"
+            android:ems="1"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/num3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            app:layout_constraintTop_toBottomOf="@id/keyImg"
+            app:layout_constraintStart_toEndOf="@id/num2"
+            android:ems="1"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/num4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/keyImg"
+            app:layout_constraintStart_toEndOf="@id/num3"
+            android:ems="1"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:inputType="number" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="80dp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/codeLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        android:weightSum="3">
+
+        <Button
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginRight="30dp"
+            android:text="Back"
+            android:onClick="goBack"
+            android:background="@drawable/custom_btn"
+            app:backgroundTint="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+             />
+
+        <Button
+            android:id="@+id/nextBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Next"
+            android:textSize="20sp"
+            android:background="@drawable/custom_btn"
+            app:backgroundTint="@null"
+            android:onClick="goNext"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+             />
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

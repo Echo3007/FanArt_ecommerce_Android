@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">Assessment2</string>
+    <string name="sign_up"><u>Sign Up</u></string>
+    <string name="password_reset"><u>Forgotten Password?</u></string>
+    <string name="welcome">Welcome, </string>
+    <string name="faq"><u>F.A.Q.</u></string>
+    <string name="logOut"><u>Logout</u></string>
+    <string name="q1"><u>Lorem ipsum dolor sit amet, consectetur adipiscing elit?</u>  </string>
+    <string name="q2"><u>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua?</u></string>
+    <string-array name="home_page_items">
+        <item>FanArt1</item>
+        <item>FanArt2</item>
+        <item>FanArt3</item>
+        <item>FanArt4</item>
+        <item>FanArt5</item>
+        <item>FanArt6</item>
+        <item>FanArt7</item>
+        <item>FanArt8</item>
+        <item>FanArt9</item>
+        <item>FanArt10</item>
+
+    </string-array>
+    <string-array name="items_descr">
+        <item>Description1</item>
+        <item>Description2</item>
+        <item>Description3</item>
+        <item>Description4</item>
+        <item>Description5</item>
+        <item>Description6</item>
+        <item>Description7</item>
+        <item>Description8</item>
+        <item>Description9</item>
+        <item>Description10</item>
+
+    </string-array>
+
+    <string name="reset_pg1">Enter your email address for verification.
+        \nA four digit code will be sent to you.</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

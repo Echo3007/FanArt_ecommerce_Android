@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "299640424247",
+    "firebase_url": "https://assessment2-4390a-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "assessment2-4390a",
+    "storage_bucket": "assessment2-4390a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:299640424247:android:8e2d44bda647bad38efcb2",
+        "android_client_info": {
+          "package_name": "com.example.assessment2"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB7TqvKwe8ITFxdhvBeCxewd6aq1Adnjvg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

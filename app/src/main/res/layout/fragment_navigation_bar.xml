@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".NavigationBarFragment">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/coral"
+        android:elevation="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:padding="5dp"
+            >
+
+            <ImageButton
+                android:id="@+id/fragmentHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/baseline_home_24"
+                android:background="@null"
+                android:onClick="goBackHome"
+                />
+
+            <ImageButton
+                android:id="@+id/fragmentUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/user_128"
+                android:background="@null"/>
+
+            <!-- <androidx.constraintlayout.widget.ConstraintLayout
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_weight="1"
+                 >
+
+                  <ImageButton
+                      android:id="@+id/fragmentNotification"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      app:layout_constraintStart_toStartOf="parent"
+                      app:layout_constraintEnd_toEndOf="parent"
+                      app:layout_constraintTop_toTopOf="parent"
+                      android:src="@drawable/notification_10"
+                      android:background="@null"/>
+
+                  <TextView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      app:layout_constraintTop_toTopOf="parent"
+                      app:layout_constraintStart_toEndOf="@id/fragmentNotification"
+                      android:text=""
+                      android:textStyle="bold"
+                      android:textSize="18sp"
+                      android:textColor="@color/red"></TextView>
+            </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+
+
+
+            <ImageButton
+                android:id="@+id/fragmentBasket"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/shopping_cart_31"
+                android:background="@null"
+                android:onClick="showBasket"/>
+
+
+            <ImageButton
+                android:id="@+id/fragmentSettings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/settings_98"
+                android:background="@null"/>
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+</FrameLayout>
