@@ -1,8 +1,8 @@
 **E-Commerce Application for Digital Art Prints
-**Introduction
+
 This project is an e-commerce application developed for purchasing printed copies of digital art, primarily focused on fan art and fan fiction chapters. The platform enables artists to upload and sell their art while retaining ownership rights. All art images were generously donated by Twitter digital artists @gingerlizzard and @spoonfulofrum. The logo on the login page was designed by @gingerlizzard, and vector images were sourced from Android Studio and VeryIcon. Firebase was chosen and implemented as the backend database for the application.
 
-Features
+**Features**
 User Authentication and Profile Management
 Login/Registration: The application opens with a login/registration page, accessible only to registered users, fostering a sense of community.
 Registration Page: Users provide personal details, address, and payment information. Input validation is implemented to ensure data integrity.
@@ -28,5 +28,5 @@ ChatGPT Assistance: Utilized extensively for debugging, code structuring, and re
 Reflection and Future Improvements
 Reflection: The development process was more challenging than anticipated. Better initial research and database structuring could have improved the development experience.
 Future Improvements: Plans to add an order history section, more product categories, and card validation for payment methods.
-**Conclusion
+
 **The e-commerce application meets its functional requirements, enabling user registration, profile management, and product purchases. Despite some challenges and existing bugs, the project successfully integrates Firebase for user authentication and database management. Future iterations will focus on improving database structure, fixing bugs, and adding new features to enhance user experience.
